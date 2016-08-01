@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   
-  <title>C++设计模式（二）：单例模式 | ����վ��</title>
+  <title>C++设计模式（二）：单例模式 | 勇者站立</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="一.什么是单例模式？　　这次我们介绍的是单例模式，也是创建型模式的一种，这应该是最为简单的一种，那么，什么是单例模式呢？所谓的单例模式，是我们在运行程序的时候，有些实例，在程序中只要存在一个就足够了，如果我们每次进行某项操作都会创建一个实例，则这会对计算机的资源和空间造成较大的浪费，这是我们不愿意看到的。　　就比如我们之前所说的工厂模式，我们当然希望系统当中只存在、也只可以存在一个工厂，如果我们在">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C++设计模式（二）：单例模式">
 <meta property="og:url" content="http://yoursite.com/2016/07/31/C-设计模式（二）：单例模式/index.html">
-<meta property="og:site_name" content="����վ��">
+<meta property="og:site_name" content="勇者站立">
 <meta property="og:description" content="一.什么是单例模式？　　这次我们介绍的是单例模式，也是创建型模式的一种，这应该是最为简单的一种，那么，什么是单例模式呢？所谓的单例模式，是我们在运行程序的时候，有些实例，在程序中只要存在一个就足够了，如果我们每次进行某项操作都会创建一个实例，则这会对计算机的资源和空间造成较大的浪费，这是我们不愿意看到的。　　就比如我们之前所说的工厂模式，我们当然希望系统当中只存在、也只可以存在一个工厂，如果我们在">
 <meta property="og:image" content="http://yoursite.com/\images\C++designer\SingletonMode\Singleton.png">
 <meta property="og:updated_time" content="2016-08-01T00:43:58.541Z">
@@ -18,7 +18,7 @@
 <meta name="twitter:description" content="一.什么是单例模式？　　这次我们介绍的是单例模式，也是创建型模式的一种，这应该是最为简单的一种，那么，什么是单例模式呢？所谓的单例模式，是我们在运行程序的时候，有些实例，在程序中只要存在一个就足够了，如果我们每次进行某项操作都会创建一个实例，则这会对计算机的资源和空间造成较大的浪费，这是我们不愿意看到的。　　就比如我们之前所说的工厂模式，我们当然希望系统当中只存在、也只可以存在一个工厂，如果我们在">
 <meta name="twitter:image" content="http://yoursite.com/\images\C++designer\SingletonMode\Singleton.png">
   
-    <link rel="alternate" href="/atom.xml" title="����վ��" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="勇者站立" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -39,11 +39,11 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">����վ��</a>
+        <a href="/" id="logo">勇者站立</a>
       </h1>
       
         <h2 id="subtitle-wrap">
-          <a href="/" id="subtitle">����΢Ц�Ĳ���</a>
+          <a href="/" id="subtitle">因此微笑的博客</a>
         </h2>
       
     </div>
@@ -58,9 +58,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -105,7 +105,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/31/C-设计模式（二）：单例模式/" data-id="cirbbe9om0000msfxkb3z93kk" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2016/07/31/C-设计模式（二）：单例模式/" data-id="cirbbgcru000260fx4tqg083n" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C++</a></li></ul>
@@ -117,7 +117,7 @@
 <nav id="article-nav">
   
     <a href="/2016/07/31/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Récent</strong>
+      <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
           Hello World
@@ -127,7 +127,7 @@
   
   
     <a href="/2016/05/21/C-设计模式（一）：工厂模式/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Ancien</strong>
+      <strong class="article-nav-caption">Older</strong>
       <div class="article-nav-title">C++设计模式（一）：工厂模式</div>
     </a>
   
@@ -142,7 +142,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Catégories</h3>
+    <h3 class="widget-title">Categories</h3>
     <div class="widget">
       <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/C-设计模式/">C++设计模式</a></li></ul>
     </div>
@@ -152,7 +152,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Mot-clés</h3>
+    <h3 class="widget-title">Tags</h3>
     <div class="widget">
       <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C++</a></li></ul>
     </div>
@@ -162,7 +162,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Nuage de mot-clés</h3>
+    <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
       <a href="/tags/C/" style="font-size: 10px;">C++</a>
     </div>
@@ -181,7 +181,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
         
@@ -209,8 +209,8 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2016 ����΢Ц<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      &copy; 2016 因此微笑<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
