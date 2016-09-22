@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Johnson King&#39;s Bolg</title>
+  <subtitle>Johnson&#39;s bolg</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://finalagito.github.io/"/>
+  <updated>2016-09-22T14:21:15.244Z</updated>
+  <id>https://finalagito.github.io/</id>
+  
+  <author>
+    <name>Johnson King</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>The Linar Regression: The First Step Of Machine Learning</title>
+    <link href="https://finalagito.github.io/2016/08/17/The-Linar-Regression-The-First-Step-Of-Machine-Learning/"/>
+    <id>https://finalagito.github.io/2016/08/17/The-Linar-Regression-The-First-Step-Of-Machine-Learning/</id>
+    <published>2016-08-17T07:36:00.000Z</published>
+    <updated>2016-09-22T14:21:15.244Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="1-Why-did-I-introduce-regression-algorithm-in-the-first-place"><a href="#1-Why-did-I-introduce-regression-algorithm-in-the-first-place" class="headerlink" title="1. Why did I introduce regression algorithm in the first place?"></a>1. Why did I introduce regression algorithm in the first place?</h2><p>I glad to start write this article, and just as the title’s words, I want to use ‘Regression’ as the first step of the Machine Learning’s world. Some senior learner may have some suggest about this article, and I’m glad to see you feedback some information.</p>
+<p>Regrassion, This is a base course when you get into the field of Supervised Learning. Now I’ll introduce this knowledgepoint for you. And may be, I’ll do more introduce about Supervised Learning  latter.</p>
+<h2 id="2-Linar-Regression"><a href="#2-Linar-Regression" class="headerlink" title="2. Linar Regression"></a>2. Linar Regression</h2><p>I perpare to talk about Regression from the most simple one: The Linar Regression.</p>
+<p>You may be famillar with this name, that’s great. Because you have alreadly learned some basic knowledge of the Regression. This part of lecture is called least squares technique(Maybe? I  can’t be too sure). You can see this topic in your primary school’s textbooks.</p>
+<p>Now, Let’s Start.</p>
+<h3 id="1-Single-Variable-Linear-Regression"><a href="#1-Single-Variable-Linear-Regression" class="headerlink" title="(1) Single Variable Linear Regression"></a>(1) Single Variable Linear Regression</h3><p>You may have some questions: What’s the Regression problem? Well, the regression problem is that we had got the data in the past time and we use it  to predict a continuous output like price.</p>
+<p>And now, I would give you an example to help you understand the algorithm.</p>
+<p>If you wants to predict the championship results of Meter race project in the next Olympic Game. So, What would you do?</p>
+<p>Ok, Now, I  provide you the figure of the sports scores of recent years:<br><img src="\images\MachineLearning\Regression\OneValuableRegresstion.jpg" alt="figure 0-0 The sports scores of Meter race project in recent years"><br>Then, you can do the predict to the scores of meter race project in the next Olympic game.</p>
+<p>So, how I can do that?</p>
+<p>well, when you check  the data in this figure, you can find some regulation, every 4 years there are a score to fit them. And you can use a algorithm to fit, then you can get the rules between in these data time.<br>Perhaps, you can make a quation to describe this line:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">f(x) = kX + b;</div></pre></td></tr></table></figure></p>
+<p>but, it can’t be so simple like this, our data is confusion and disorder, we should to consider for the error, so, the true equation is:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Y[i] = f(x[i]) + E(x[i]);</div></pre></td></tr></table></figure></p>
+<p>The i is the serial number of the Training data we got, and the Y is the output.<br>we gave the definition of the f(x), and the E(x[i]) is the error of the x[i].<br>Now, I have a equation.</p>
+<p><img src="\images\MachineLearning\Regression\ForHousePrice.png" alt="figure 0-1 The correlation between input and output"><br>In this function,we have simple input and  output, we put into the value of the year and get a output, just one feature(year), that’s why we called it ‘Single’.<br>Now, we can assume that the model is a quadratic function:</p>
+<p>Then, let us see a more complicated one.</p>
+<p>You would follow with me, right?</p>
+<h3 id="2-Multivariate-Linear-Regression"><a href="#2-Multivariate-Linear-Regression" class="headerlink" title="(2)Multivariate Linear Regression"></a>(2)Multivariate Linear Regression</h3><p>I could use a example to tell you what’s call the multivariate linear regression, in fact, it’s a very common example.<br>If I want to buy a house, I would do a predict to the house’s price, then, I can get the price that I may have to pay.<br>Of course, you can still use the house’s area as an input and the house’s price to be an output, but if we do this, the question we will meet is that we can’t make a high accuracy of prediction.<br>It’s not difficult to think, because there isn’t only a simple feature to influence the house’s price, so, we should take the other features into this model, then we will have several inputs and one output, this is a form of Multiple Linar Regression.<br>If you don’t understand, don’t worry, I’ll use a diagram to explain this concept.<br>So, this time I want to use another example to descripe the multivariate linear regression, may be you are similar with this event:</p>
+<p>If you want to  by a house, you will find some factors to predict the house’s price, but only one feature can’t get a good accuracy, so you may need to use two, three or more features  as the inputs value, so, that’s what I want to say.</p>
+<p>Now, I will give two figures, one is for Single  value’s situation and another is for the Multiple’s.</p>
+<p><img src="\images\MachineLearning\Regression\SimplePicForHouse.png" alt="figure 2-0 The Simple Linar Regression for House Price"><br>This picture comes from the Machine Learning course of Washington.</p>
+<p><img src="\images\MachineLearning\Regression\MultiplePicForHouse.png" alt="figure 2-1 Two inputs for House Predict model"><br>If we compare this picture and the above one, we can see the diffience of the two situations.(Suppose we function has two inputs: the house’s age and the square feet)<br>The Results no longer only decided by an element, but controlled by house’s age and square feet.<br>As you know, We cannot be too severely limit your thinking, So you can expand your thinking:</p>
+<p>How the situation will be If we get a (n + 1) dimensional input?<br>So we also can use a fuction to describle the relationship between the (n + 1) dimensional input and house price( In the above example, we only used a two-dimensional input, Here I will it to expand to if we have the ‘n + 1’ d):<br><img src="\images\MachineLearning\Regression\EuqationForMul.png" alt="figure 2-2 The equation For multivariate linear regression"></p>
+<p>We assumed the X[0] = 1;<br>If you have the knowledge of linear algebra, you can find that this quation equal to<em> θ’X</em>.</p>
+<h3 id="3-Gradient-Descent-Algorithm"><a href="#3-Gradient-Descent-Algorithm" class="headerlink" title="(3)Gradient Descent Algorithm"></a>(3)Gradient Descent Algorithm</h3><p><img src="\images\MachineLearning\Regression\MLModelForRegress.png" alt="figure 3-0 The Module process of Regression(from Washington college&#39;s courses) "><br>Now, if we  use the idea in upon part of this article, we have to set a part called “quality metric”(That’s right, look at the orange block in the picture). This module makes the program working.<br>Our Predict of house price could be have error(In fact, there is error is certain), we need to have a method to let computer to make more accurate predictions by calculation accuracy.<br>The method to resolve this question is that we called the Gradient Descent Algorithm.</p>
+<p>Aha, this gradicent algorithm is very important in the Machine Learning’s history.<br>Ok, let us look about it.</p>
+<p>May be you have already find the key of the above equation, yes, the Gradient Descent Algorithm is a method to find the most suitable value for the θ[1…..n].(The value of n is definited by your features number)<br>Now we have a question: How can we make a assess of the predict result?<br>To diffierent situation have diffierent methods, but we just talk about one function for the Regression(Is this because of our title).</p>
+<p>Now, I used this equation to describe the deviation between the predicted and actual values:<br>  <em>h(θ)(x[i])-y[i]</em><br>And we will the n results together, this is the first assessment of the eqation(just for one feature).<br><img src="\images\MachineLearning\Regression\EuqationForGrad.png" alt="figure 3-1 Equation For assessment in gradient descent"><br><em>Remeber the 1/n has did a balance for the value.</em><br>We got the function about the assessment, now how we define the value of the θ?<br>Can I use this picture at this location and  take a relaxed?</p>
+<p><img src="\images\MachineLearning\Regression\EuqationForTheta.png" alt="figure 3-2 To define the θ(This pic come from ML course of Standford)"></p>
+<p><em>We called this “Cost Function”.</em><br>And the Alpha(<em>α</em>) in the equation is called the <em> “learning rate”</em>, I’ll introduce this on the below.</p>
+<p>So, this is the one feature’s situation, and you can imagine that there is multidimensional for θ[1…….n].</p>
+<h4 id="feature-normalization-for-Multivariate-Linear-Regression"><a href="#feature-normalization-for-Multivariate-Linear-Regression" class="headerlink" title="feature normalization - for Multivariate Linear Regression"></a><1>feature normalization - for Multivariate Linear Regression</1></h4><p>feature normalization is important，So we have to do some feature scaling,  Let all the value of the change in the interval [- 1, 1].<br>You should make sure feature’s value are on a similar scale, use different methods according to different situations, don’t asking me about this, maybe you could try <em>xi=(xi-μi)/σi</em>.</p>
+<h4 id="Learning-Rate-and-How-Can-It-Stop"><a href="#Learning-Rate-and-How-Can-It-Stop" class="headerlink" title="Learning Rate and How Can It Stop?"></a><2>Learning Rate and How Can It Stop?</2></h4><p>Will, that’s the most importance, and this is a problem that you want to know.</p>
+<p>How can it Stop and, when?</p>
+<p>Look this picture(Also from the Andred Ng’s class):<br><img src="\images\MachineLearning\Regression\ThetaAndCost.png" alt="figure 3-3 Find the  most suitable value for θ1 and θ2(two-dimensional)"><br>We can see that, through the iteration step by step procedure, we  arrived at the  centre of the circle in the picture.</p>
+<p>That’s what I wanted.(To find the minmum of J(θ))<br>But if the <em>α</em> is so big, then we can’t find the minmum of J(θ).</p>
+<p><img src="\images\MachineLearning\Regression\LearningRate.png" alt="figure 3-4 The figure about the unsuitable and suitable value for α"></p>
+<p>Now, you have a intuitive impression of Learning Rate, and in some situation, you have to design a method to find it.<br>Well, the worst and common method is  try to verify every possible values. :)</p>
+<h2 id="3-Summary"><a href="#3-Summary" class="headerlink" title="3.Summary"></a>3.Summary</h2><p>Now, today we have done a macro for the “ Linar Regression”, but there are a special kind of species called “the Logistic Regression”.<br><em>This belongs to the category of “classification”.</em><br>I will continue this in a future article. :)</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;1-Why-did-I-introduce-regression-algorithm-in-the-first-place&quot;&gt;&lt;a href=&quot;#1-Why-did-I-introduce-regression-algorithm-in-the-first-pla
+    
+    </summary>
+    
+      <category term="Machine Learning" scheme="https://finalagito.github.io/categories/Machine-Learning/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>The first Course Of Machine Learning</title>
+    <link href="https://finalagito.github.io/2016/08/05/The%20first%20Course%20Of%20Machine%20Learning/"/>
+    <id>https://finalagito.github.io/2016/08/05/The first Course Of Machine Learning/</id>
+    <published>2016-08-05T00:06:16.000Z</published>
+    <updated>2016-09-22T08:59:14.116Z</updated>
+    
+    <content type="html"><![CDATA[<p>well, today we’ll talk something about Machine Learning.<br>First, I have to say, I do not often use English to write article, if you can help me find some mistake in grammar, I’ll be very happy.<br>So, let’s get into today’s business.</p>
+<h1 id="1-What’s-the-Machine-Learning"><a href="#1-What’s-the-Machine-Learning" class="headerlink" title="1.What’s the Machine Learning?"></a>1.What’s the Machine Learning?</h1><p>This phrase has became more and more hot in recent years, but what is it?<br>All right, these information about Machine Learning were come from <strong>Andrew Ng</strong>, I’m here to pay my homage to him.<br>In 1959, Arthur Samuel,he defined <strong>machine learning as the field of study that gives computers the ability to learn without being explicitly programmed</strong>, this man wrote a checkers playing program.<br>Arthur Samuel is not a very good checkers player, but he let the program to play 10’s of 1000’s of games against itself. And by watching what sorts of board positions tended to lead to wins and what sorts of board positions tended to lead to losses.<br>Eventually, this computer play checkers better than himself.<br>So,this is an old definition.</p>
+<p>A more recent definition was defined by Tom Mitchell:<br><strong>A computer program is said to learn from experience E with respect to some task T and some performance measure P, if its performance on T as measured by p improves with Exprience E.</strong><br>well, that a long sentence, in fact,it’s just like a tongue twister.<br>In the Checkers Game ,E is having the program played 1000’s Games against itself,T is the task of playing Checkers,and P, will be the probability that it wins the next game of checkers against new opponent.</p>
+<h1 id="2-Our-Life-With-Machine-Learning"><a href="#2-Our-Life-With-Machine-Learning" class="headerlink" title="2.Our Life With Machine Learning"></a>2.Our Life With Machine Learning</h1><p>So, we talk about so many things about what is Machine Learning, may be you still not have any interest in this field.<br>Don’t Worry, I’ll say some information more Close  to our life:<br>This technology is looks so useful, but where can we use it?</p>
+<p>Please calm down, I’ll be list in the following:</p>
+<ol>
+<li><strong>intercept Spam message and E-mail.</strong>That’s so useful ,thanks for it.</li>
+<li><strong>To classify the customers needs and preferences.</strong>Which kind of music would you like?</li>
+<li><strong>Search engine just like geogle and baidu.</strong>You want a better Search engine?Well,Machine Learning is important.</li>
+<li><strong>Robots made a decision.</strong> Like AlphaGo? perhaps.</li>
+</ol>
+<p>etc.</p>
+<p>In fact, I’m very excecting when I write this article. why?<br>“It’s must be the most important Century in humans history.”  by SUNIL RAY.<br>There may be some exaggerated but most are correct.<br>The democratization of the tools and techniques will take the development to the technology.<br>In the future, everyone will be Contributing to the future of humanity.</p>
+<h1 id="3-Machine-Learning"><a href="#3-Machine-Learning" class="headerlink" title="3.Machine Learning"></a>3.Machine Learning</h1><p>Broadly, there are 3 types of Machine Learning Algorithms:</p>
+<ul>
+<li>Supervised Learning</li>
+<li>Unsupervised Learning</li>
+<li>Reinforcement Learning<br>And I will introduce each module muinutely.</li>
+</ul>
+<h2 id="1-Supervised-Learning"><a href="#1-Supervised-Learning" class="headerlink" title="(1) Supervised Learning"></a>(1) Supervised Learning</h2><p>Supervised Learning,this must be the first type of Machine Learning Algorithms you met.<br>This algorithm consist of a target / outcome variable (or dependent variable) which is to be predicted from a given set of predictors (independent variables).<br>Using these set of variables, we generate a function that map inputs to desired outputs. The training process continues until the model achieves a desired level of accuracy on the training data.<br>Here are some famous algorithms are belongs to Supervised Learning:</p>
+<ul>
+<li>Regression ( OK.I will introduce this later )</li>
+<li>KNN algorithms ( the easiest one )</li>
+<li>Decision Tree ( if you only have a little data ,It’s may be easy to Overfitting,but to be honest,it’s a classic algorithm )</li>
+<li>Random Forest ( based on the decision tree )</li>
+<li>Logistic Regression ( different from Regression,this  is a classification not a regression algorithm)</li>
+<li>SVM( The support vector machines ) ( a important algorithm ,you must know it )<br>etc.<h2 id="2-Unsupervised-Learning"><a href="#2-Unsupervised-Learning" class="headerlink" title="(2) Unsupervised Learning"></a>(2) Unsupervised Learning</h2>I’d like to introduce this kind of Machine algorithm after the Supervised Learning.<br>The Unsupervised Learning do not have any target or outcome variable to predict or estimate,it is used for clustering population in different groups.When you face to the large Scale data,you can consider to use the Unsupervised Learning.<br>Here are some famous algorithms are belongs to Unsupervised Learning:</li>
+<li>k-means ( want to do a classification about your customer? this one is the Basic algorithm )</li>
+<li>Mini Batch K-Means ( k-means can’t deal with the big data,it will take you a lot of time to compute.In this situation you can use this algorithm )</li>
+<li>Neural network models ( A famous One ,right? You must know about this model—perpare for the course of Deep Learning )</li>
+<li>Gaussian Mixture Model ( GMM )( If you want to do a speaker recognition,the methods of MFCC + GMM  will be a good choice )</li>
+<li>Dimensionality Reduction Algorithms ( high-dimensional? No ,you can’t design a algorithm base on this situation,So—you need this One )<br>etc.</li>
+</ul>
+<h2 id="3-Reinforcement-Learning"><a href="#3-Reinforcement-Learning" class="headerlink" title="(3)Reinforcement Learning"></a>(3)Reinforcement Learning</h2><p>Using this algorithm, the machine is trained to make a specific decisions. It works On this way: the machine is exposed to an environment where it trains itself continually using trial and error.<br>if you want to make a very smart Chinese chess program, the Supervised Learning and Unsupervised Learning will spend a lots of time on Traversal calculation. So, the better method is use Reinforcement Learning.<br>Here are some famous algorithms are belongs to Reinforcement Learning:</p>
+<ul>
+<li>Markov Decision Process,(MDP)</li>
+<li>Monte Carlo Methods(an important value compute algrorithm)<br>I didn’t use so much about Reinforcement Learning, So I’ll talk in the later published articles.<h1 id="4-Summary"><a href="#4-Summary" class="headerlink" title="4.Summary"></a>4.Summary</h1>Well, today we have a general overview of the Machine Learning, after this article, I’ll published more articles about the algorithms and new Technology of Machine Learning, maybe you can see something else. you may feel difficult to read this article because it’s my first time to use English write a long article as this One.<br>Well, it’s not a problem, for me this is a new beginning,and maybe it’s same to you.</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;well, today we’ll talk something about Machine Learning.&lt;br&gt;First, I have to say, I do not often use English to write article, if you can
+    
+    </summary>
+    
+      <category term="Machine Learning" scheme="https://finalagito.github.io/categories/Machine-Learning/"/>
+    
+    
+      <category term="Machine Learning" scheme="https://finalagito.github.io/tags/Machine-Learning/"/>
+    
+      <category term="Big Data" scheme="https://finalagito.github.io/tags/Big-Data/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://finalagito.github.io/2016/07/31/hello-world/"/>
+    <id>https://finalagito.github.io/2016/07/31/hello-world/</id>
+    <published>2016-07-31T15:20:08.289Z</published>
+    <updated>2016-07-31T15:20:08.289Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>C++设计模式（二）：单例模式</title>
+    <link href="https://finalagito.github.io/2016/07/31/C-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88%E4%BA%8C%EF%BC%89%EF%BC%9A%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/"/>
+    <id>https://finalagito.github.io/2016/07/31/C-设计模式（二）：单例模式/</id>
+    <published>2016-07-31T03:19:49.000Z</published>
+    <updated>2016-08-01T08:14:17.102Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="一-什么是单例模式？"><a href="#一-什么是单例模式？" class="headerlink" title="一.什么是单例模式？"></a>一.什么是单例模式？</h1><p>　　这次我们介绍的是单例模式，也是创建型模式的一种，这应该是最为简单的一种，那么，什么是单例模式呢？<br>所谓的单例模式，是我们在运行程序的时候，有些实例，在程序中只要存在一个就足够了，如果我们每次进行某项操作都会创建一个实例，则这会对计算机的资源和空间造成较大的浪费，这是我们不愿意看到的。<br>　　就比如我们之前所说的工厂模式，我们当然希望系统当中只存在、也只可以存在一个工厂，如果我们在每调用一个功能的时候就创建一个工厂，就会对计算机的资源造成极大的浪费，我们无法对工厂实例进行有效的操作（如果需要的话）。<br>　　而单例模式，就是用来保证我们所需要的对象在程序运行中只存在1个而存在的（其实你可以用添加一个计数属性的方法让它能够实例化为有限个，但是实际上我们一般并不需要这样的办法）。<br>　　其意图是保证一个类仅有一个实例，并提供一个访问它的全局访问点（你也许可以称它为接口），该实例被所有程序模块共享。</p>
+<h1 id="二-单例模式"><a href="#二-单例模式" class="headerlink" title="二.单例模式"></a>二.单例模式</h1><p>　　就像我们前面所说，单例模式，是为了保证我们所需要的对象在程序运行中只存在1个。那么它究竟做了什么操作？<br>　　实际上，单例模式的步骤非常简单。<br>　　单例模式的主要操作就是将一个类实例化之前，首先对当前程序进行确认，看现在的程序当中是否已经存在了一个实例化的对象，如果存在，则我们直接将这个对象的引用或者指针返回，即获取到当前存在的这个对象，反之，则创建这个对象，从而保证该种类的对象在程序中只存在一个。<br>也许我应该先上段代码？<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">//这是我们所要求全局只能存在一个的类</div><div class="line">class CSingleton</div><div class="line">&#123;</div><div class="line">private:</div><div class="line">	CSingleton()&#123;&#125;;</div><div class="line">	static CSingleton *m_pInstance;//静态指针</div><div class="line"></div><div class="line">public:</div><div class="line">	virtual ~CSingleton()&#123;&#125;;</div><div class="line">	static CSingleton*	GetInstance()</div><div class="line">	&#123;</div><div class="line">		if(m_pInstance == NULL)//判断对象是否存在</div><div class="line">			m_pInstance = new CSingleton();</div><div class="line">		return m_pInstance;</div><div class="line">	&#125;</div><div class="line">&#125;;</div><div class="line">************调用**************</div><div class="line">CSingleton* CSingleton::m_pInstance = NULL;</div><div class="line">int _tmain(int argc, _TCHAR* argv[])</div><div class="line">&#123;</div><div class="line">	CSingleton *p1 = CSingleton::GetInstance();</div><div class="line">	CSingleton *p2 = p1-&gt;GetInstance();</div><div class="line">	return 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>　　如你所想，不难，确实可以称的上是最容易的设计模式了，而我将它作为第二个设计模式来讲，除了它简单以外，其实还有一个原因，就是它经常和工厂模式结合使用<br>那么你也猜到我下面要做一些扩展了对不？<br>没错，那就是——</p>
+<h1 id="三-结合了单例模式的简单工厂模式"><a href="#三-结合了单例模式的简单工厂模式" class="headerlink" title="三.结合了单例模式的简单工厂模式"></a>三.结合了单例模式的简单工厂模式</h1><p>　　实际上我们还有另外一个例子可以使用这个单例的概念，比如我们点击一次按钮，创建一个窗口，那么如果我再按一次，如果并非单例模式，那么我每按一次都会产生一个窗口，到最后想像一下满屏窗口的场景……嗯，还是单例模式好。<br>　　那么我们来看一看他们的UML图（请原谅我用上次的例子炒现成的）：<br><img src="\images\C++designer\SingletonMode\Singleton.png" alt="图 3-1 结合了单例模式的简单工厂模式UML示例图"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div></pre></td><td class="code"><pre><div class="line">//运算类</div><div class="line">class Operation&#123;</div><div class="line">private:</div><div class="line">	</div><div class="line">	double A;//第一个数</div><div class="line">    double B;//第二个数</div><div class="line">public:</div><div class="line">	Operation()&#123;&#125;;</div><div class="line">	virtual ~Operation()&#123;&#125;;</div><div class="line">	bool SetA(double a)//设定A</div><div class="line">	&#123;</div><div class="line">		this-&gt;A = a;</div><div class="line">		return true;</div><div class="line">	&#125;;</div><div class="line">	</div><div class="line">	bool SetB(double b)//设定B</div><div class="line">&#123;</div><div class="line">		this-&gt;B = b;</div><div class="line">		return true;</div><div class="line">	&#125;;</div><div class="line">	double GetA()//获得A</div><div class="line">	&#123;</div><div class="line">		return this-&gt;A;</div><div class="line">	&#125;;</div><div class="line">	double GetB()//获得B</div><div class="line">	&#123;</div><div class="line">		return this-&gt;B;</div><div class="line">	&#125;;</div><div class="line">	virtual double GetResult() = 0;</div><div class="line">	</div><div class="line"></div><div class="line">&#125;;</div><div class="line">//相加类，在此处我们继承了运算类</div><div class="line">class Sub :public Operation</div><div class="line">&#123;</div><div class="line">public:</div><div class="line">	Sub()&#123;&#125;;</div><div class="line">	virtual ~Sub()&#123;&#125;;</div><div class="line">	double GetResult()</div><div class="line">	&#123;</div><div class="line">		return GetA() + GetB();</div><div class="line">	&#125;;</div><div class="line">&#125;;</div><div class="line">//相减类，同样继承了运算类</div><div class="line">class Dec :public Operation</div><div class="line">&#123;</div><div class="line">public:</div><div class="line">	Dec()&#123;&#125;;</div><div class="line">	virtual ~Dec()&#123;&#125;;</div><div class="line">	double GetResult()</div><div class="line">	&#123;</div><div class="line">		return GetA() - GetB();</div><div class="line">	&#125;;</div><div class="line">&#125;;</div><div class="line">//工厂类，在此我们不用其他更复杂的工厂形式了，直接用简单的</div><div class="line">class Factory</div><div class="line">&#123;</div><div class="line"></div><div class="line">private:</div><div class="line">//注意这里是一个关键点，我们将构造函数归为private一类，让从外部无法单独实例化它，而必须通过下面的Create函数</div><div class="line">	Factory()&#123;&#125;;</div><div class="line">	static Factory* Factory_Instance;</div><div class="line">public:</div><div class="line">//没错就是它</div><div class="line">	static Factory * Create()</div><div class="line">	&#123;</div><div class="line">		if (Factory_Instance == NULL)</div><div class="line">			Factory_Instance = new Factory();</div><div class="line">		return Factory_Instance;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	Operation *CreateProject(string type)</div><div class="line">	&#123;</div><div class="line">		if (type==&quot;Sub&quot;)</div><div class="line">		return new Sub();</div><div class="line">		if (type == &quot;Dec&quot;)</div><div class="line">			return new Dec();</div><div class="line">		return NULL;</div><div class="line">	&#125;;</div><div class="line">&#125;;</div><div class="line">**************主函数调用*****************</div><div class="line">//静态指针要在此处实例化</div><div class="line"> Factory* FactoryChild :: Factory_Instance = NULL;</div><div class="line">int _tmain(int argc, _TCHAR* argv[])</div><div class="line">&#123;</div><div class="line">	Factory* Test =  Factory :: Create();</div><div class="line">   Operation *p1 =	Test-&gt;CreateProject(&quot;Sub&quot;);</div><div class="line">   p1-&gt;SetA(4);</div><div class="line">   p1-&gt;SetB(8);</div><div class="line">   cout&lt;&lt;p1-&gt;GetResult()&lt;&lt;endl;</div><div class="line">   Factory* Test2 = Factory :: Create();</div><div class="line">   Operation *p2 = Test-&gt;CreateProject(&quot;Dec&quot;);</div><div class="line">   cout &lt;&lt; p2-&gt;GetResult();</div><div class="line">//结果为12</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h1 id="四-注意点"><a href="#四-注意点" class="headerlink" title="四.注意点"></a>四.注意点</h1><p>　　1,构造函数不能被继承，单例模式中必须将构造函数设置为私有，将析构函数设置为公有虚函数<br>　　2,可以在单例模式中再调用单例，通过对象引用和对象指针实现虚函数的多态，公有继承基类有的虚函数，派生类的成员函数不使用virtual也是虚函数，但是函数内部具体调用的函数又是另外一个概念了，良好的做法就是在派生类中也使用关键字virtual</p>
+<h1 id="五-单例模式的优缺点"><a href="#五-单例模式的优缺点" class="headerlink" title="五.单例模式的优缺点"></a>五.单例模式的优缺点</h1><p>优点：<br>1.减少了时间和空间的开销（new实例的开销）。<br>2.提高了封装性，使得外部不易改动实例。<br>缺点：<br>1.由于单例模式中没有抽象层，因此单例类的扩展有很大的困难。<br>2.单例类的职责过重，在一定程度上违背了“单一职责原则”。<br>3.滥用单例将带来一些负面问题，如为了节省资源将数据库连接池对象设计为的单例类，可能会导致共享连接池对象的程序过多而出现连接池溢出。如果实例化的对象长时间不被利用，系统会认为是垃圾而被回收，这将导致对象状态的丢失。<br>以上的缺点都是一些滥用单例模式带来的错误，但是说实在的，你总有要用到它的时候，不过要谨慎使用就是了（笑）。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;一-什么是单例模式？&quot;&gt;&lt;a href=&quot;#一-什么是单例模式？&quot; class=&quot;headerlink&quot; title=&quot;一.什么是单例模式？&quot;&gt;&lt;/a&gt;一.什么是单例模式？&lt;/h1&gt;&lt;p&gt;　　这次我们介绍的是单例模式，也是创建型模式的一种，这应该是最为简单的一种，
+    
+    </summary>
+    
+      <category term="C++设计模式" scheme="https://finalagito.github.io/categories/C-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+      <category term="C++" scheme="https://finalagito.github.io/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C++设计模式（一）：工厂模式</title>
+    <link href="https://finalagito.github.io/2016/05/21/C-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/"/>
+    <id>https://finalagito.github.io/2016/05/21/C-设计模式（一）：工厂模式/</id>
+    <published>2016-05-21T09:35:16.000Z</published>
+    <updated>2016-08-01T07:44:26.929Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="一-什么是设计模式？"><a href="#一-什么是设计模式？" class="headerlink" title="一.什么是设计模式？"></a>一.什么是设计模式？</h2><p>   如果要想完全的理解什么是设计模式，我们就需要对设计模式本身有一定的了解，那么，什么是设计模式呢？我们在进行一般的C++代码编程的时候，经常听到说，C++是一门面向对象的语言，要使用面向对象的方法，但是我们在实际操作的时候总会感到迷惑：面向对象究竟是什么样的？怎样才是有别于“结构化编程”的编程方法？</p>
+<p> 那么，这个时候就轮到我们的主角设计模式登场了。</p>
+<p>   所谓的设计模式，是一种代码经验的总结，它在编程中反复使用，保证代码的可靠性和可维护性。它让开发者能够更加好的复用成功的结构体系，也方便后面的开发者理解设计思路。<br>   现阶段，设计模式主要分为三个种类：创建性模式、结构型模式和行为型模式。</p>
+<p>   今天我们要说的工厂模式，就是创建型模式的一种，也是开篇必讲的一种。</p>
+<h2 id="二-简单工厂模式"><a href="#二-简单工厂模式" class="headerlink" title="二.简单工厂模式"></a>二.简单工厂模式</h2><p>要想讲述工厂模式，我们一般都会从简单工厂模式开始讲起。<br>如果你要是被拜托制作一款系统应用于上班族的“刷脸”上班，你会怎么做？</p>
+<p>啊，我看看，嗯….如果按照我们之前的想法，刷脸做一个类，然后把人脸识别、人脸特征提取、人脸相似度比对全都放进去，之后数据库上传和查询做一个类，然后让总体界面调用，但是如果过了一段时间，公司觉得刷脸还不够，因为有些家伙很狡猾，采取了一些手段蒙混过去了这个部分，所以公司觉得要在之前脸部注册的数据上在做些新功能。<br>这个时候你怎么办呢？<br>想必你肯定需要进入到刷脸的这个类里面去修改里面的方法和添加新的函数，这样一来就十分麻烦，代码的可维护性就相当的差。<br>或者像《大话设计模式》中所说，设计一个计算器，如果你将所有的加、减、乘、除都放在一个类里面，则在开发新功能的时候公司就不得不向你开放全部源码，这就是设计上的错误。</p>
+<p>这个时候，工厂模式就发挥了作用。</p>
+<p>工厂模式在开发系统的扩展功能方面颇有优势，而且可以轻松方便的构造对象实例，不用担心构造对方实例的复杂过程。</p>
+<p>特点：提供创建对象的接口. 为系统结构提供了非常灵活强大的动态扩展机制，只要我们更换一下具体的工厂方法，系统其他地方无需一点变换，就有可能将系统功能进行改头换面的变化</p>
+<p>而简单工厂模式，可以说是工厂模式的简化版本，下面我们通过一个案例来详细的分析一下：</p>
+<p>我们还是使用之前说的计算器的案例吧，这个案例简单而且比较省事（所以关键是比较省事么….(笑)）<br>首先我们给出简单工厂模式的UML图：<br><img src="\images\C++designer\one_FactoryMode\简单工厂模式UML图.png" alt="图0-0 简单工厂模式UML图"><br>如图所示，我们在图中总共有4个类，分别是工厂类Factory,还有计算类的父类Operation,继承它的子类sub和Dec(我就不把<br>加减乘除全写上了，大家知道就行。)<br>也就是说，用户不需要直接对计算类进行操作，用户只需要实例化一个工厂类的对象，然后调用工厂类中的CreateObject方法，就可以创建一个Operation的子类对象（当然，CreateObject()中的String参数是用来判断到底实例化的是哪一种子类对象，比如我<br>设定当传参数“Sub”时，就创建一个Sub类的对象）<br>举例如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">Operation *CreateProject(string type)</div><div class="line">	&#123;</div><div class="line">		if (type==&quot;Sub&quot;)</div><div class="line">		return new Sub();</div><div class="line">		if (type == &quot;Dec&quot;)</div><div class="line">			return new Dec();</div><div class="line">		return NULL;</div><div class="line">	&#125;;</div></pre></td></tr></table></figure></p>
+<p>这样就会返回一个Opration 的子类对象，函数中的new 调用的是对应子类对象的构造函数。<br>之后只需这样调用，就能够得到结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">Factory* Test =  FactoryChild::Create();</div><div class="line">  Operation *p1 = Test-&gt;CreateProject(&quot;Sub&quot;);</div><div class="line">  p1-&gt;SetA(4);</div><div class="line">  p1-&gt;SetB(8);</div><div class="line">  cout&lt;&lt;p1-&gt;GetResult()&lt;&lt; endl;</div></pre></td></tr></table></figure></p>
+<p>此时我们可以得到输出，是12</p>
+<p>这就是最简单的简单工厂模式，相信大家已经感受到他的好处，因为我们在开始开发扩展程序的时候，可以不在对原先已经成功的模块进行修改，这一编程方式符合C++编程中的<strong>依赖倒转原则</strong></p>
+<h2 id="三-工厂模式"><a href="#三-工厂模式" class="headerlink" title="三.工厂模式"></a>三.工厂模式</h2><p>   说完了简单的，我们来看看更进一步的。<br>工厂模式，其实，工厂模式只是在简单工厂模式的基础上修改一些东西，你可能会问，为什么还要修改呢？刚刚的工厂模式看起来已经非常方便、还有什么必要再修改呢？<br>是的，简单工厂模式使我们在开发计算器的扩展程序的时候可以不用面对全部的、复杂的源码，而是直接开发集成到计算器的基类就可以了，<br>但是，在这个时候，我们仍不能满足，因为我们发现，它违背了C++编程中的<strong>开闭原则</strong>（所谓的“开放-封闭”原则就是开放接口，封闭修改）。即使是我们可以不用修改Operation类，我们却需要对Factory进行编辑，这仍然是一个不好的地方。<br>为了让工厂类也能够脱离这不舒服的修改模式，我们的工厂模式，闪亮登场了。<br>下面，我们照例贴出工厂模式的UML图，通过两张UML图的对比，我们可以清晰的看出两者的区别：<br><img src="\images\C++designer\one_FactoryMode\工厂模式UML.png" alt="图0-1 工厂模式UML图"><br>没错….看出区别了吗？其实我们就是对工厂类做了和Operate类一样的事情，我们将Factory类也抽象成了一个基类，当我们想要做什么的时候，我们就直接生成对应的工厂子类（比如SubFactory）,然后调用方法CreateProject()就会直接生成对应的Operation的子类（Sub）。<br>但是它还是有缺点。<br><strong>缺点：</strong>增加运算类，会修改客户端代码，工厂方法只是把简单工厂的内部逻辑判断移到了客户端进行，每增加一个功能的类，就需要增加一个功能工厂，增加了额外的开发量。<br>下面，我们来说说最后一种：</p>
+<h2 id="四-抽象工厂模式"><a href="#四-抽象工厂模式" class="headerlink" title="四.抽象工厂模式"></a>四.抽象工厂模式</h2><p>工厂模式总算是看起来像个样子了，但是还不够，老看计算器的问题有点腻了，我们来看看大人的生意吧！<br>我们来生产电脑配件吧！<br>但是我产出的电脑主机箱中的零件不只一种，要怎么办？<br>再来一个工厂？<br>不不不，你何必要浪费那个钱呢？<br>我们要把现有的工厂利用起来:<br><img src="\images\C++designer\one_FactoryMode\抽象工厂模式.png" alt="图0-2 抽象工厂模式UML图"><br>希望你没被这张图晃花眼睛，实际上，我们确实是做到了将多个产品放到了一个工厂下面，这样的话你就可以生产出两个牌子的主板和Cpu了，我们在抽象工厂类中生成产品的时候，我们生成工厂子类并调用相应的产品方法，非常灵活。<br>我们能够在两个牌子中间进行切换，但是说实在的，修改客户端代码这部分还是逃不掉。<br><strong>优点：</strong>易于切换，方便管理<br><strong>缺点：</strong>还是需要修改客户端代码</p>
+<h2 id="五-附加内容"><a href="#五-附加内容" class="headerlink" title="五.附加内容"></a>五.附加内容</h2><p>《大话设计模式》中对于这个部分有利用简单工厂模式进行一个改进：<br><img src="\images\C++designer\one_FactoryMode\抽象工厂模式改进UML.png" alt="图0-3 抽象工厂模式改进UML图"><br>嘛，其实就是把之前的模式又用了回来而已。<br>那么我们现在总结一下：<br>简单工厂模式：<br>只有一个工厂类，且使用了判断语句。<br>违背开闭原则，较简单<br>工厂方法模式：<br>只有一个抽象产品类，可以派生出多个具体产品类。<br> 一个抽象工厂类，可以派生出多个具体工厂类。<br>每个具体工厂类只能创建一个具体产品类的实例。<br>抽象工厂模式：<br>多个抽象产品类，每个抽象产品类可以派生出多个具体产品类。<br> 一个抽象工厂类，可以派生出多个具体工厂类。<br>　 每个具体工厂类可以创建多个具体产品类的实例。<br> 区别：<br>工厂方法模式只有一个抽象产品类，而抽象工厂模式有多个。<br>工厂方法模式的具体工厂类只能创建一个具体产品类的实例，而抽象工厂模式可以创建多个。<br>简单工厂模式是工厂模式打破开闭原则的缩减版。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;一-什么是设计模式？&quot;&gt;&lt;a href=&quot;#一-什么是设计模式？&quot; class=&quot;headerlink&quot; title=&quot;一.什么是设计模式？&quot;&gt;&lt;/a&gt;一.什么是设计模式？&lt;/h2&gt;&lt;p&gt;   如果要想完全的理解什么是设计模式，我们就需要对设计模式本身有一定的了解
+    
+    </summary>
+    
+      <category term="C++设计模式" scheme="https://finalagito.github.io/categories/C-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+      <category term="C++" scheme="https://finalagito.github.io/tags/C/"/>
+    
+  </entry>
+  
+</feed>
