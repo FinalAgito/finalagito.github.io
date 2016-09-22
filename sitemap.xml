@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://finalagito.github.io/guestbook/index.html</loc>
+    
+    <lastmod>2016-09-22T15:55:43.790Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://finalagito.github.io/2016/08/17/The-Linar-Regression-The-First-Step-Of-Machine-Learning/</loc>
     
     <lastmod>2016-09-22T14:21:15.244Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>https://finalagito.github.io/about/index.html</loc>
     
     <lastmod>2016-09-22T10:22:09.003Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://finalagito.github.io/guestbook/index.html</loc>
-    
-    <lastmod>2016-09-22T09:26:18.299Z</lastmod>
     
   </url>
   
