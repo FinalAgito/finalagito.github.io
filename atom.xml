@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://finalagito.github.io/"/>
-  <updated>2016-09-23T07:06:42.468Z</updated>
+  <updated>2016-09-23T07:08:17.853Z</updated>
   <id>https://finalagito.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://finalagito.github.io/2016/08/17/The-Linar-Regression-The-First-Step-Of-Machine-Learning/"/>
     <id>https://finalagito.github.io/2016/08/17/The-Linar-Regression-The-First-Step-Of-Machine-Learning/</id>
     <published>2016-08-17T07:36:00.000Z</published>
-    <updated>2016-09-23T07:06:42.468Z</updated>
+    <updated>2016-09-23T07:08:17.853Z</updated>
     
     <content type="html"><![CDATA[<h2 id="1-Why-did-I-introduce-regression-algorithm-in-the-first-place"><a href="#1-Why-did-I-introduce-regression-algorithm-in-the-first-place" class="headerlink" title="1. Why did I introduce regression algorithm in the first place?"></a>1. Why did I introduce regression algorithm in the first place?</h2><p>I glad to start write this article, and just as the title’s words, I want to use ‘Regression’ as the first step of the Machine Learning’s world. Some senior learner may have some suggest about this article, and I’m glad to see you feedback some information.</p>
 <p>Regrassion, This is a base course when you get into the field of Supervised Learning. Now I’ll introduce this knowledgepoint for you. And may be, I’ll do more introduce about Supervised Learning  latter.</p>
@@ -32,7 +32,7 @@
 <p>If you wants to predict the championship results of Meter race project in the next Olympic Game. So, What would you do?</p>
 <p>Ok, Now, I  provide you the figure of the sports scores of recent years:<br><img src="\images\MachineLearning\Regression\OneValuableRegresstion.jpg" alt="figure 0-0 The sports scores of Meter race project in recent years"><br>Then, you can do the predict to the scores of meter race project in the next Olympic game.</p>
 <p>So, how I can do that?<br><img src="\images\MachineLearning\Regression\ForHousePrice.png" alt="figure 0-1 The correlation between input and output"></p>
-<p>well, when you check  the data in this figure, you can find some regulation, every 4 years there are a score to fit them. And you can use a algorithm to fit, then you can get the rules between in these data time.<br>Perhaps, you can make a quation to describe this line:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">f(x) = kX + b;</div></pre></td></tr></table></figure></p>
+<p>When you check  the data in this figure, you can find some regulation, every 4 years there are a score to fit them. And you can use a algorithm to fit, then you can get the rules between in these data time.<br>Perhaps, you can make a quation to describe this line:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">f(x) = kX + b;</div></pre></td></tr></table></figure></p>
 <p>but, it can’t be so simple like this, our data is confusion and disorder, we should to consider for the error, so, the true equation is:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Y[i] = f(x[i]) + E(x[i]);</div></pre></td></tr></table></figure></p>
 <p>The i is the serial number of the Training data we got, and the Y is the output.<br>we gave the definition of the f(x), and the E(x[i]) is the error of the x[i].<br>Now, I have a equation.</p>
 <p>In this function,we have simple input and  output, we put into the value of the year and get a output, just one feature(year), that’s why we called it ‘Single’.<br>Now, we can assume that the model is a quadratic function:</p>
