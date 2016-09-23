@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Johnson King&#39;s Bolg</title>
-  <subtitle>Johnson&#39;s bolg</subtitle>
+  <title>Johnson King&#39;s Blog</title>
+  <subtitle>Johnson&#39;s blog</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://finalagito.github.io/"/>
