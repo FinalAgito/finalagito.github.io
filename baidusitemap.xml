@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+    
+  <url>
+    <loc>https://finalagito.github.io/2016/08/17/The-Linar-Regression-The-First-Step-Of-Machine-Learning/</loc>
+    <lastmod>2016-09-22T14:21:15.244Z</lastmod>
+    <data>
+        <display>
+        <title>The Linar Regression: The First Step Of Machine Learning</title>
+        <pubTime>2016-08-17T07:36:00.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="Machine Learning" url="https://finalagito.github.io/categories/Machine-Learning/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
+    <loc>https://finalagito.github.io/2016/08/05/The%20first%20Course%20Of%20Machine%20Learning/</loc>
+    <lastmod>2016-09-22T08:59:14.116Z</lastmod>
+    <data>
+        <display>
+        <title>The first Course Of Machine Learning</title>
+        <pubTime>2016-08-05T00:06:16.000Z</pubTime>
+        
+        <tag>Machine Learning</tag>
+         
+        <tag>Big Data</tag>
+         
+         
+           
+             
+              <breadCrumb title="Machine Learning" url="https://finalagito.github.io/categories/Machine-Learning/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://finalagito.github.io/2016/07/31/C-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88%E4%BA%8C%EF%BC%89%EF%BC%9A%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/</loc>
+    <lastmod>2016-08-01T08:14:17.102Z</lastmod>
+    <data>
+        <display>
+        <title>C++设计模式（二）：单例模式</title>
+        <pubTime>2016-07-31T03:19:49.000Z</pubTime>
+        
+        <tag>C++</tag>
+         
+         
+           
+             
+              <breadCrumb title="C++设计模式" url="https://finalagito.github.io/categories/C-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://finalagito.github.io/2016/05/21/C-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/</loc>
+    <lastmod>2016-08-01T07:44:26.929Z</lastmod>
+    <data>
+        <display>
+        <title>C++设计模式（一）：工厂模式</title>
+        <pubTime>2016-05-21T09:35:16.000Z</pubTime>
+        
+        <tag>C++</tag>
+         
+         
+           
+             
+              <breadCrumb title="C++设计模式" url="https://finalagito.github.io/categories/C-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://finalagito.github.io/2016/07/31/hello-world/</loc>
+    <lastmod>2016-07-31T15:20:08.289Z</lastmod>
+    <data>
+        <display>
+        <title>Hello World</title>
+        <pubTime>2016-07-31T15:20:08.289Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+</urlset>
