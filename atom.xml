@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://finalagito.github.io/"/>
-  <updated>2016-11-01T13:58:13.218Z</updated>
+  <updated>2017-02-23T00:52:42.730Z</updated>
   <id>https://finalagito.github.io/</id>
   
   <author>
@@ -16,18 +16,63 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>R and R*Tree(二):The Dynamic Structure For Spatial Searching</title>
+    <link href="https://finalagito.github.io/2017/01/17/R-and-R-Tree-%E4%BA%8C-The-Dynamic-Structure-For-Spatial-Searching/"/>
+    <id>https://finalagito.github.io/2017/01/17/R-and-R-Tree-二-The-Dynamic-Structure-For-Spatial-Searching/</id>
+    <published>2017-01-17T02:17:27.000Z</published>
+    <updated>2017-02-23T00:52:42.730Z</updated>
+    
+    <content type="html"><![CDATA[<p>This article is not completed, I will add the demo codes to this article.<br>Ok, after so many time, now we can finally start our second trip.<br>Today I will introduce the rest of the algorithms, and make a comparison between the R-tree and the R* tree.<br>Most of them are the same, but the R* tree has some important change in the algorithms.<br>But first, let’s finish the last part of R-tree.</p>
+<h2 id="1-Algorithm-Undertake-section-in-the-previous-article"><a href="#1-Algorithm-Undertake-section-in-the-previous-article" class="headerlink" title="1.Algorithm(Undertake section in the previous article)"></a>1.Algorithm(Undertake section in the previous article)</h2><h3 id="1-1-Delete-Algorithm"><a href="#1-1-Delete-Algorithm" class="headerlink" title="1.1 Delete Algorithm"></a>1.1 Delete Algorithm</h3><p>First, let’s start with a easy one, the delete algorithm.<br>We use this function to deal with the situation that you want to delete a index (or we called it Value) E from the tree. We denoted as E.<br>Now I will show you the steps:</p>
+<ol>
+<li>Use the <em>Find Leaf</em> Function to find the Leaf L which include the record E, end this program when the record can’t be find.</li>
+<li>Delete L from E.</li>
+<li>Use the Function <em>Condense Tree</em> , and pass the  L as the parameter.</li>
+<li>If the Root node have only one leaf node after the condense, use the leaf node as the new root node.</li>
+</ol>
+<h3 id="1-2-Condense-Tree-Algorithm"><a href="#1-2-Condense-Tree-Algorithm" class="headerlink" title="1.2 Condense Tree Algorithm"></a>1.2 Condense Tree Algorithm</h3><p>Using a node which has deleted one record as the parameter.<br>Translating the records of the node and delete itself if the records’number has became so small.<br>We also can delete the transport node if we have the demand. Ajusting the area of all the rectangles from root node to which node you choose. Keeping their area smallest.<br>Steps:</p>
+<ol>
+<li>We transite the L to N, assume Q as the delete nodes, which equals to NULL.</li>
+<li>If N is the root node, go to the step 6, or denote P as N’s parent node, ‘EN’ as the record in N.</li>
+<li>If N’s record nodes smaller than the limit number m, delete the EN from P, and add N to Q’s room.</li>
+<li>If N hasn’t be deleted, we should adjust ENI to help it include all the records in N.</li>
+<li>Let N equals to P, loop the step from 2.</li>
+<li>Reinsert the node from Q into the tree, and you should put the nodes which at the upper layer on the tree’s upper layer. (In order to make the original child nodes become the root’s child nodes.)</li>
+</ol>
+<h3 id="1-3-Node-Split-Algorithm"><a href="#1-3-Node-Split-Algorithm" class="headerlink" title="1.3 Node Split Algorithm"></a>1.3 Node Split Algorithm</h3><p>In order to make a best split method for control the rectangle’s area smallest.</p>
+<h4 id="1-4-Quadratic-Cost-Algorithm"><a href="#1-4-Quadratic-Cost-Algorithm" class="headerlink" title="1.4 Quadratic Cost  Algorithm"></a>1.4 Quadratic Cost  Algorithm</h4><p>In order to find a split method to get the smallest area.<br>Step:</p>
+<ol>
+<li>Find two nodes in the line(We have amount m+1 nodes) which have waste the biggest area if we put them together. (Use the area of the rectangle include with the two nodes minus each area of the two nodes)</li>
+<li>Others use the same method to divide into two groups.</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;This article is not completed, I will add the demo codes to this article.&lt;br&gt;Ok, after so many time, now we can finally start our second 
+    
+    </summary>
+    
+      <category term="algorithm" scheme="https://finalagito.github.io/categories/algorithm/"/>
+    
+    
+      <category term="Mining Data" scheme="https://finalagito.github.io/tags/Mining-Data/"/>
+    
+  </entry>
+  
+  <entry>
     <title>R and R*Tree(一):The Dynamic Structure For Spatial Searching</title>
     <link href="https://finalagito.github.io/2016/11/01/R-and-R-Tree-%E4%B8%80-The-Dynamic-Structure-For-Spatial-Searching/"/>
     <id>https://finalagito.github.io/2016/11/01/R-and-R-Tree-一-The-Dynamic-Structure-For-Spatial-Searching/</id>
     <published>2016-11-01T13:56:55.000Z</published>
-    <updated>2016-11-01T13:58:13.218Z</updated>
+    <updated>2017-01-17T04:16:50.122Z</updated>
     
     <content type="html"><![CDATA[<p>This article is not completed, I will add the demo codes to this article.</p>
 <h2 id="1-Spatial-Searching"><a href="#1-Spatial-Searching" class="headerlink" title="1.Spatial Searching"></a>1.Spatial Searching</h2><p>Before I start to talking about it, you may have to know something of two words: “Dimensional” and “Searching”.</p>
 <p>You always can hear a word called “Dimensional”, we used it in every aspect of life, and we always need to solve some problem about it. Straight line belongs to one dimensional space, and the plane is two dimensional and a cube is three-dimensional.</p>
 <p>And “Searching”, If you are engaged in industries related to IT then you will not be unfamiliar with it, because we have mentioned so many, many times in our work and life. Searching for the information, the food’s information, the place’s information, the people’s information, We have been searching for this all the time.</p>
 <p>So, what’s “Spatial Searching”?</p>
-<p>Now we must post a question first: If our data is not one-dimensional(As we have just said, an area, and other multi-dimentional data), how can we make the searching more efficiently?</p>
+<p>Now we must post a question first: If our data is not one-dimensional(As we just said, an area, and other multi-dimentional data), how can we make the searching more efficiently?</p>
 <p>That’s must be interesting, and you not need to be feel confuse for this because we have give you a method to resolve this problem : R-tree, and its change version,R* tree .</p>
 <p>In this article, I will introduce this amazing invention to you(We will pay more focus on R*tree). To describe and explain its structure, and after that I will use the programming language to implement it(I’m  familiar with c++, so I will use this).</p>
 <p>I assume that you already have considerable programming knowledge. And I will make it easy to understand as much as possible.</p>
